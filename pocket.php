@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pocket Pay</title>
+    <link rel="stylesheet" href="Style.css">
+</head>
+<body>
+
+<?php
+
+$about = [
+    "Pocket Pay is an innovative cashless payment 
+    system designed specifically for schools to manage
+     student pocket money and canteen transactions. Our 
+     system offers a secure, efficient, and user-friendly
+      platform that benefits students, parents, and school 
+      administrators. With Pocket Pay,
+       schools can ensure a smooth, cashless environment that 
+       enhances student convenience and promotes financial literacy."
+];
+$benefits = [
+    "Streamlined Operations" => "Reduces the burden of 
+    cash handling and reconciliation in school canteens and other facilities.",
+    "Enhanced Security" => "Minimizes risks associated with carrying and managing
+    school cash on school premises",
+    "Parental Engagement" => "Involves parents in their child's financial 
+    education and spending activites",
+    "Data-Driven Decisions" => "Provides valuable data to help school make informed
+    decisions about canteen operations and    student preferences",
+];
+
+$key_features = [
+    "Cashless Transactions" => 
+    "Students can make purchases in the school canteen and other facilities using a prepaid
+    digital wallet.",
+    "Eliminates the need for students to carry cash, reducing the risk of theft",
+
+    "Parental Control and Monitoring" => "Parents can load money into
+    their child's digital wallet and set spending limits.", 
+    "Real-time notifications and transaction history allow parents to monitor spending habits."
+];
+$system_features = [
+    "secure and Efficient" => "the System uses advanced security protocols
+    to ensure all transactions are safe and encrypted.", 
+    "Reduces Cash handling and related administrative tasks for school staff", 
+
+    "User-Friendly Interface" => "Easy to use mobile app for students and parents",
+    "Simple Web-based dashboard for school administrators to manage and track Transactions", 
+
+    "Financial Literacy" =>"Helps Students learn to manage money by providing
+    insights into their spending patterns", "Encourages Responsible finacial behaviour for a young age"
+];
+
+$security_features = [
+    "Data encryption to protect sensitive information.",
+    "Two-factor authentication for secure user login.",
+    "Access control and role-based permissions.",
+    "Regular system audits and monitoring.",
+    "Automatic session timeout to prevent unauthorized access."
+];
+
+// Implementation Steps
+$implementation_steps = [
+    "Requirement gathering and analysis",
+    "System design and architecture",
+    "Database setup and configuration",
+    "Backend and frontend development",
+    "Testing and bug fixing",
+    "Deployment and user onboarding",
+    "Maintenance and system updates"
+];
+?>
+
+<header>
+    <h1>Welcome to Pocket Pay</h1>
+    <p>An Innovative Cashless Payment System Designed Specifically for Schools</p>
+</header>
+
+<nav>
+    <a href="#executive-summary">Executive Summary</a>
+    <a href="#benefits">Benefits to the School</a>
+    <a href="#key-features">Key Features</a>
+    <a href="#system-security">System Features & Security</a>
+    <a href="#implementation">Implementation</a>
+</nav>
+
+<section id="executive-summary">
+    <h2>Executive Summary</h2>
+    <?php
+        foreach ($about as $text) {
+            echo "<p>" . htmlspecialchars($text) . "</p>";
+        }
+    ?>
+</section>
+
+<section id="benefits">
+    <h2>Benefits to the School</h2>
+    <ul>
+        <?php
+            foreach ($benefits as $title => $explanation) {
+                echo "<li><strong>" . htmlspecialchars($title) . ":</strong> " . htmlspecialchars($explanation) . "</li>";
+            }
+        ?>
+    </ul>
+</section>
+
+<section id="key-features">
+    <h2>Key Features</h2>
+    <ul>
+        <?php
+            foreach ($key_features as $title =>  $feature) {
+        
+                echo "<li><strong>" . htmlspecialchars($title) . ":</strong> " . htmlspecialchars($feature) . "</li>";
+           
+            }
+        ?>
+    </ul>
+</section>
+
+<section id="system-security">
+    <h2>System Features</h2>
+    <ul>
+        <?php
+            foreach ($system_features as $feature) {
+                echo "<li>" . htmlspecialchars($feature) . "</li>";
+            }
+        ?>
+    </ul>
+
+    <h3>Security Features</h3>
+    <ul>
+        <?php
+            foreach ($security_features as $feature) {
+                echo "<li>" . htmlspecialchars($feature) . "</li>";
+            }
+        ?>
+    </ul>
+</section>
+
+<section id="implementation">
+    <h2>Implementation</h2>
+    <ul>
+        <?php
+            foreach ($implementation_steps as $step) {
+                echo "<li>" . htmlspecialchars($step) . "</li>";
+            }
+        ?>
+    </ul>
+</section>
+
+<div class = implement>
+    <div>
+        <h2>STEP 1</h2>
+    </div>
+    <div>
+        <h2>Consultation and Customization</h2>
+    </div>
+    <div>
+        <h2>Initial meetings with school representatives
+            to understand specific needs and customise the system accordingly
+        </h2>
+    </div>
+    <div>
+        <h2>STEP 2</h2>
+    </div>
+    <div>
+        <h2>STEP System Setup</h2>
+    </div>
+    <div>
+        <h2>STEP Installation of the Pocket Pay System, including necessary hardware and software
+        . We   shal also conduct training sessions for school staff and administrators
+        </h2>
+    </div>
+    <div>
+        <h2>STEP 3</h2>
+    </div>
+    <div>
+        <h2>STEP Launch and Support</h2>
+    </div>
+    <div>
+        <h2>STEP Lauch Event to introduce the system to students and parents. Ongoing technical support and
+            customer service vial phone call and physical visits
+        </h2>
+    </div>
+</div>
+<style>
+
+    /* IMPLEMENTATION PLAN (using class .implement) */
+.implement {
+    width: 90%;
+    margin: 40px auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    font-family: "Segoe UI", Tahoma, Arial, sans-serif;
+}
+
+/* Each box */
+.implement div {
+    background-color: #6f8062; /* medium green */
+    padding: 25px 20px;
+    border-radius: 6px;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 130px;
+    text-align: center;
+}
+
+/* Title text styling */
+.implement div h2 {
+    margin: 0;
+    font-size: 18px;
+    line-height: 1.4;
+    font-weight: 600;
+}
+
+/* Left column (STEP numbers) – darker color */
+.implement div:nth-child(3n-2) {
+    background-color: #55664a; /* dark green */
+    font-weight: bold;
+}
+
+/* Middle column (step titles) – medium color */
+.implement div:nth-child(3n-1) {
+    background-color: #6f8062;
+}
+
+/* Right column (descriptions) – lighter color */
+.implement div:nth-child(3n) {
+    background-color: #899c84; /* light green */
+    text-align: left;
+    padding: 20px 25px;
+    line-height: 1.5;
+}
+
+/* Responsive for phones */
+@media (max-width: 768px) {
+    .implement {
+        grid-template-columns: 1fr;
+    }
+}
+
+</style>
+<footer>
+    <p>&copy; <?php echo date("Y"); ?> Pocket Pay. All Rights Reserved.</p>
+</footer>
+
+</body>
+</html>

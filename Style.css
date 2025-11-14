@@ -1,0 +1,108 @@
+/* IMPLEMENTATION PLAN (using class .implement) */
+.implement {
+    width: 90%;
+    margin: 40px auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    font-family: "Segoe UI", Tahoma, Arial, sans-serif;
+}
+
+/* Each box */
+.implement div {
+    background-color: #6f8062; /* medium green */
+    padding: 25px 20px;
+    border-radius: 6px;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 130px;
+    text-align: center;
+}
+
+/* Title text styling */
+.implement div h2 {
+    margin: 0;
+    font-size: 18px;
+    line-height: 1.4;
+    font-weight: 600;
+}
+
+/* Left column (STEP numbers) – darker color */
+.implement div:nth-child(3n-2) {
+    background-color: #55664a; /* dark green */
+    font-weight: bold;
+}
+
+/* Middle column (step titles) – medium color */
+.implement div:nth-child(3n-1) {
+    background-color: #6f8062;
+}
+
+/* Right column (descriptions) – lighter color */
+.implement div:nth-child(3n) {
+    background-color: #899c84; /* light green */
+    text-align: left;
+    padding: 20px 25px;
+    line-height: 1.5;
+}
+
+/* Responsive for phones */
+@media (max-width: 768px) {
+    .implement {
+        grid-template-columns: 1fr;
+    }
+}
+
+  
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            background-color: #f4f4f4;
+        }
+
+        header {
+            background-color: #004aad;
+            color: white;
+            padding: 15px 0;
+            text-align: center;
+        }
+
+        nav {
+            background-color: #00337a;
+            overflow: hidden;
+        }
+
+        nav a {
+            float: left;
+            display: block;
+            color: white;
+            text-align: center;
+            padding: 14px 20px;
+            text-decoration: none;
+        }
+
+        nav a:hover {
+            background-color: #005fff;
+        }
+
+        section {
+            padding: 40px;
+            background-color: white;
+            margin: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+
+        footer {
+            text-align: center;
+            padding: 15px;
+            background-color: #004aad;
+            color: white;
+            position: relative;
+            bottom: 0;
+            width: 100%;
+        }
+
+ 
